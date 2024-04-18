@@ -20,7 +20,7 @@ public class logicscript : MonoBehaviour
     public Text playerscores;
 
     public AudioSource buttoneffect;
-    public AudioSource backgroundmusic;
+    /*public AudioSource backgroundmusic;*/
 
     public ballscript balllogic;
 
@@ -62,7 +62,7 @@ public class logicscript : MonoBehaviour
         pausescreen.SetActive(true);
         buttoneffect.Play();
         Time.timeScale = 0f;  
-        backgroundmusic.Pause();
+        /*backgroundmusic.Pause();*/
     }
 
     public void resumegame()
@@ -72,7 +72,7 @@ public class logicscript : MonoBehaviour
         pausescreen.SetActive(false);
         buttoneffect.Play();
         Time.timeScale = 1f;
-        backgroundmusic.Play();
+        /*backgroundmusic.Play();*/
     }
 
     public void restartgame() 
@@ -94,7 +94,7 @@ public class logicscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        backgroundmusic.Play();
+        /*backgroundmusic.Play();*/
         balllogic = GameObject.FindGameObjectWithTag("ball").GetComponent<ballscript>();
 
         screentime = balllogic.ballresettimer;
