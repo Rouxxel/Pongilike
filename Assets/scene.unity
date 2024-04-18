@@ -851,8 +851,10 @@ MonoBehaviour:
   ballbody2D: {fileID: 525190850}
   initialvelocity: 18
   direction: {x: 0, y: 0}
-  panglecontroller: 1
-  nanglecontroller: -1
+  xpanglecontroller: 1
+  xnanglecontroller: -1
+  ypanglecontroller: 0.5
+  ynanglecontroller: -0.5
   ballresettimer: 3
   timer: 0
   paddleeffect: {fileID: 525190856}
@@ -1648,7 +1650,6 @@ MonoBehaviour:
   pointscoredscreen: {fileID: 120679561}
   playerscores: {fileID: 1555740737}
   buttoneffect: {fileID: 900343584}
-  backgroundmusic: {fileID: 0}
   balllogic: {fileID: 525190854}
 --- !u!82 &900343583
 AudioSource:
