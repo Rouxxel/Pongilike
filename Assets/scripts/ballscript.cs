@@ -8,8 +8,11 @@ public class ballscript : MonoBehaviour
     public float initialvelocity = 10;
     public Vector2 direction;
 
-    public float panglecontroller = 1;
-    public float nanglecontroller = -1;
+    public float xpanglecontroller = 1;
+    public float xnanglecontroller = -1;
+
+    public float ypanglecontroller = 1;
+    public float ynanglecontroller = -1;
 
     public float ballresettimer = 3;
     public float timer = 0;
@@ -19,7 +22,7 @@ public class ballscript : MonoBehaviour
 
     void randomizeddirection()
     {
-        direction = new Vector2(Random.Range(panglecontroller, nanglecontroller),Random.Range(panglecontroller, nanglecontroller));
+        direction = new Vector2(Random.Range(xpanglecontroller, xnanglecontroller),Random.Range(ypanglecontroller, ynanglecontroller));
         direction = direction.normalized;
         ballbody2D.velocity = direction * initialvelocity;
     }
@@ -29,9 +32,9 @@ public class ballscript : MonoBehaviour
     {
        transform.position = Vector2.zero;
 
-        ballbody2D.velocity = Vector2.zero;
+       ballbody2D.velocity = Vector2.zero;
 
-        randomizeddirection();
+       randomizeddirection();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
