@@ -73,7 +73,6 @@ public class ballscript : MonoBehaviour
         {
             if (timer < ballresettimer)
             {
-                Debug.Log("Ball reset has started");
                 timer = timer + Time.deltaTime;
             }
             else
